@@ -20,14 +20,14 @@
     <style name="LabelStyle" parent="android:Widget.TextView">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
-        <item name="android:textSize">10sp</item>
+        <item name="android:textSize">30sp</item>
         <item name="android:textColor">@color/primaryTextcolor</item>
     </style>
 
     <style name="ValueStyle" parent="android:Widget.TextView">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
-        <item name="android:textSize">10sp</item>
+        <item name="android:textSize">30sp</item>
         <item name="android:textColor">@color/secondaryTextcolor</item>
     </style>
 
