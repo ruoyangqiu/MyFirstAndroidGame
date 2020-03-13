@@ -9,9 +9,9 @@
     <color name="triciaryBackgroundcolor">#9C27B0</color>
     <color name="lightBackgroundcolor">#58EFBF</color>
 
-    <color name="primaryTextcolor">#FFEB3B</color>
-    <color name="secondaryTextcolor">#CDDC39</color>
-    <color name="triciaryTextcolor">#A0EC47</color>
+    <color name="primaryTextcolor">#2C0547</color>
+    <color name="secondaryTextcolor">#43031A</color>
+    <color name="triciaryTextcolor">#16FF1A</color>
 
 
     <color name="colorPrimary">#A790E8</color>
