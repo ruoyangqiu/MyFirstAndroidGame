@@ -28,9 +28,9 @@ public class ItemViewModel {
 
     static {
         // Add some sample items.
-        addItem(new ItemModel("Gold Sword", "Really Sharp", 1, 1, 1, "sword2"));
-        addItem(new ItemModel("Strong Shield", "Good and Strong", 0, 0, 2,"shield4a"));
-        addItem(new ItemModel("Bunny Hat", "I Live for speed", 0, 0, 3,"hat1"));
+        addItem(new ItemModel("Gold Sword", "Really Sharp", 1, 1, 1, "redhorn"));
+        addItem(new ItemModel("Strong Shield", "Good and Strong", 0, 0, 2,"emperornecklace"));
+        addItem(new ItemModel("Bunny Hat", "I Live for speed", 0, 0, 3,"goldenhairpin"));
     }
 
     private static void addItem(ItemModel item) {
