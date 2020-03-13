@@ -28,9 +28,9 @@ public class ItemViewModel {
 
     static {
         // Add some sample items.
-        addItem(new ItemModel("Gold Sword", "Really Sharp", 1, 1, 1, "redhorn"));
-        addItem(new ItemModel("Strong Shield", "Good and Strong", 0, 0, 2,"emperornecklace"));
-        addItem(new ItemModel("Bunny Hat", "I Live for speed", 0, 0, 3,"goldenhairpin"));
+        addItem(new ItemModel("Red Horn", "Ascient Instrument", 5, 6, 3, ItemLocationEnum.PrimaryHand, "redhorn"));
+        addItem(new ItemModel("Emperor Necklace", "Symbol of power", 0, 0, 15, ItemLocationEnum.Necklace,"emperornecklace"));
+        addItem(new ItemModel("Golden Hair Pin", "Beautiful pin for ladies", 0, 0, 3,ItemLocationEnum.Head,"goldenhairpin"));
     }
 
     private static void addItem(ItemModel item) {
@@ -53,21 +53,21 @@ public class ItemViewModel {
         public final String id = UUID.randomUUID().toString();
         public final String Guid = id;
         public final String ImageURI;
-        //public final ItemLocationEnum Location;
+        public final ItemLocationEnum Location;
 
         public ItemModel(String name,
                          String description,
                          int range,
                          int damage,
                          int value,
-                         //ItemLocationEnum location,
+                         ItemLocationEnum location,
                          String uri) {
             this.Name = name;
             this.Description = description;
             this.Range = range;
             this.Damage  = damage;
             this.Value = value;
-            //this.Location = location;
+            this.Location = location;
             this.ImageURI = uri;
         }
 
