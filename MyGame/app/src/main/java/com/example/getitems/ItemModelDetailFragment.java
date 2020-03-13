@@ -64,7 +64,11 @@ public class ItemModelDetailFragment extends Fragment {
 
         // Show the dummy content as text in a TextView.
         if (mItem != null) {
-            ((TextView) rootView.findViewById(R.id.itemmodel_detail)).setText(mItem.details);
+            (TextView) rootView.findViewById(R.id.ItemDetails_NameValue)).setText(mItem.Name);
+            ((TextView) rootView.findViewById(R.id.ItemDetails_DescriptionValue)).setText(mItem.Description);
+            ((TextView) rootView.findViewById(R.id.ItemDetails_RangeValue)).setText(String.valueOf(mItem.Range));
+            ((TextView) rootView.findViewById(R.id.ItemDetails_ValueValue)).setText(String.valueOf(mItem.Value));
+            ((TextView) rootView.findViewById(R.id.ItemDetails_DamageValue)).setText(String.valueOf(mItem.Damage));
         }
 
         return rootView;
