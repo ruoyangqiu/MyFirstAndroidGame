@@ -28,9 +28,9 @@ public class ItemViewModel {
 
     static {
         // Add some sample items.
-        addItem(new ItemModel("Red Horn", "Ascient Instrument", 5, 6, 3, ItemLocationEnum.PrimaryHand, "redhorn"));
-        addItem(new ItemModel("Emperor Necklace", "Symbol of power", 0, 0, 15, ItemLocationEnum.Necklace,"emperornecklace"));
-        addItem(new ItemModel("Golden Hair Pin", "Beautiful pin for ladies", 0, 0, 3,ItemLocationEnum.Head,"goldenhairpin"));
+        addItem(new ItemModel("Red Horn", "Ascient Instrument", 5, 6, 3, ItemLocationEnum.PrimaryHand, ItemAttributeEnum.Attack,"redhorn"));
+        addItem(new ItemModel("Emperor Necklace", "Symbol of power", 0, 0, 15, ItemLocationEnum.Necklace, ItemAttributeEnum.Health,"emperornecklace"));
+        addItem(new ItemModel("Golden Hair Pin", "Beautiful pin for ladies", 0, 0, 3,ItemLocationEnum.Head, ItemAttributeEnum.Defense,"goldenhairpin"));
     }
 
     private static void addItem(ItemModel item) {
@@ -54,6 +54,7 @@ public class ItemViewModel {
         public final String Guid = id;
         public final String ImageURI;
         public final ItemLocationEnum Location;
+        public final ItemAttributeEnum Attribute;
 
         public ItemModel(String name,
                          String description,
@@ -61,6 +62,7 @@ public class ItemViewModel {
                          int damage,
                          int value,
                          ItemLocationEnum location,
+                         ItemAttributeEnum attribute,
                          String uri) {
             this.Name = name;
             this.Description = description;
@@ -69,6 +71,7 @@ public class ItemViewModel {
             this.Value = value;
             this.Location = location;
             this.ImageURI = uri;
+            this.Attribute = attribute;
         }
 
         @Override
