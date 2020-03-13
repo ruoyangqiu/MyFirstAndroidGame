@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.UUID;
 
 /**
  * Helper class for providing sample content for user interfaces created by
@@ -27,9 +28,9 @@ public class ItemViewModel {
 
     static {
         // Add some sample items.
-        addItem(new ItemModel("Gold Sword", "Really Sharp", 1, 1, 1,ItemLocationEnum.PrimaryHand, "sword2"));
-        addItem(new ItemModel("Strong Shield", "Good and Strong", 0, 0, 2,ItemLocationEnum.OffHand,"shield4a"));
-        addItem(new ItemModel("Bunny Hat", "I Live for speed", 0, 0, 3,ItemLocationEnum.Head,"hat1"));
+        addItem(new ItemModel("Gold Sword", "Really Sharp", 1, 1, 1, "sword2"));
+        addItem(new ItemModel("Strong Shield", "Good and Strong", 0, 0, 2,"shield4a"));
+        addItem(new ItemModel("Bunny Hat", "I Live for speed", 0, 0, 3,"hat1"));
     }
 
     private static void addItem(ItemModel item) {
@@ -38,7 +39,7 @@ public class ItemViewModel {
     }
 
 
-    
+
 
     /**
      * A dummy item representing a piece of content.
@@ -52,21 +53,21 @@ public class ItemViewModel {
         public final String id = UUID.randomUUID().toString();
         public final String Guid = id;
         public final String ImageURI;
-        public final ItemLocationEnum Location;
+        //public final ItemLocationEnum Location;
 
         public ItemModel(String name,
                          String description,
                          int range,
                          int damage,
                          int value,
-                         ItemLocationEnum location,
+                         //ItemLocationEnum location,
                          String uri) {
             this.Name = name;
             this.Description = description;
             this.Range = range;
             this.Damage  = damage;
             this.Value = value;
-            this.Location = location;
+            //this.Location = location;
             this.ImageURI = uri;
         }
 
