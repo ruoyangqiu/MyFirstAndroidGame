@@ -10,12 +10,20 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import org.w3c.dom.Text;
+
+import static android.provider.AlarmClock.EXTRA_MESSAGE;
+
 public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        Context ActivityContext = this;
+
+        GlobalModel.MainActivityContext = ActivityContext;
 
         Button button = (Button) findViewById(R.id.Button1);
         button.setOnClickListener(new View.OnClickListener() {
