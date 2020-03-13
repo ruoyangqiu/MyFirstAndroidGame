@@ -58,6 +58,6 @@
         android:contentDescription="item"
         app:layout_anchor="@+id/app_bar"
         app:layout_anchorGravity="center"
-        app:srcCompat="@drawable/red_horn" />
+        app:srcCompat="@drawable/redhorn" />
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
