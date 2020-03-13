@@ -1,5 +1,8 @@
 package com.example.getitems.model;
 
+import com.example.getitems.GlobalModel;
+import com.example.getitems.R;
+
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
@@ -12,7 +15,7 @@ public enum ItemLocationEnum {
     Head(10),
 
     // Things to put around the neck, such as necklass, broaches, scarfs, neck ribbons.  Can have at the same time with Head items ex. Ribbon for Hair, and Ribbon for Neck is OK to have
-    Necklass(12),
+    Necklace(12),
 
     // The primary hand used for fighting with a sword or a staff.
     PrimaryHand(20),
@@ -41,21 +44,21 @@ public enum ItemLocationEnum {
             case Unknown:
                 return GlobalModel.MainActivityContext.getString(R.string.Unknown);
             case Head:
-                return "Head";
-            case Necklass:
-                return "Necklass";
+                return GlobalModel.MainActivityContext.getString(R.string.Head);
+            case Necklace:
+                return GlobalModel.MainActivityContext.getString(R.string.Necklace);
             case PrimaryHand:
-                return "PrimaryHand";
+                return GlobalModel.MainActivityContext.getString(R.string.PrimaryHand);
             case OffHand:
-                return "OffHand";
+                return GlobalModel.MainActivityContext.getString(R.string.OffHand);
             case Finger:
-                return "Any Finger";
+                return GlobalModel.MainActivityContext.getString(R.string.AnyFinger);
             case RightFinger:
-                return "Right Finger";
+                return GlobalModel.MainActivityContext.getString(R.string.RightFinger);
             case LeftFinger:
-                return "Left Finger";
+                return GlobalModel.MainActivityContext.getString(R.string.LeftFinger);
             case Feet:
-                return "Feet";
+                return GlobalModel.MainActivityContext.getString(R.string.Feet);
         }
         return "Unknown";
     }
