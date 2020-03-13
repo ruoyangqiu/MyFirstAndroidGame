@@ -27,9 +27,9 @@ public class ItemViewModel {
 
     static {
         // Add some sample items.
-        for (int i = 1; i <= COUNT; i++) {
-            addItem(createDummyItem(i));
-        }
+        addItem(new ItemModel("Gold Sword", "Really Sharp", 1, 1, 1,ItemLocationEnum.PrimaryHand, "sword2"));
+        addItem(new ItemModel("Strong Shield", "Good and Strong", 0, 0, 2,ItemLocationEnum.OffHand,"shield4a"));
+        addItem(new ItemModel("Bunny Hat", "I Live for speed", 0, 0, 3,ItemLocationEnum.Head,"hat1"));
     }
 
     private static void addItem(ItemModel item) {
@@ -37,18 +37,8 @@ public class ItemViewModel {
         ITEM_MAP.put(item.id, item);
     }
 
-    private static ItemModel createDummyItem(int position) {
-        return new ItemModel(String.valueOf(position), "Item " + position, makeDetails(position));
-    }
 
-    private static String makeDetails(int position) {
-        StringBuilder builder = new StringBuilder();
-        builder.append("Details about Item: ").append(position);
-        for (int i = 0; i < position; i++) {
-            builder.append("\nMore details information here.");
-        }
-        return builder.toString();
-    }
+    
 
     /**
      * A dummy item representing a piece of content.
@@ -82,7 +72,7 @@ public class ItemViewModel {
 
         @Override
         public String toString() {
-            return content;
+            return Name;
         }
     }
 }
