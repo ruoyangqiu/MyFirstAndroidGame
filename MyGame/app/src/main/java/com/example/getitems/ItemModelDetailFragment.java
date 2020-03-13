@@ -52,7 +52,15 @@ public class ItemModelDetailFragment extends Fragment {
             Activity activity = this.getActivity();
             CollapsingToolbarLayout appBarLayout = (CollapsingToolbarLayout) activity.findViewById(R.id.toolbar_layout);
             if (appBarLayout != null) {
-                appBarLayout.setTitle(mItem.content);
+                appBarLayout.setTitle(mItem.Name);
+                // The id on the layout
+                ImageView image = ((ImageView) activity.findViewById(R.id.itemmodel_URI));
+
+                // Get the image from the drawable folder
+                String uri = "@drawable/" + mItem.ImageURI;  // where myresource (without the extension) is the file
+                int imageResource = getResources().getIdentifier(uri, "drawable", "com.example.getitems");
+                Drawable res = getResources().getDrawable(imageResource);
+                image.setImageDrawable(res);
             }
         }
     }
@@ -64,11 +72,11 @@ public class ItemModelDetailFragment extends Fragment {
 
         // Show the dummy content as text in a TextView.
         if (mItem != null) {
-            (TextView) rootView.findViewById(R.id.ItemDetails_NameValue)).setText(mItem.Name);
+            ((TextView) rootView.findViewById(R.id.ItemDetails_NameValue)).setText(mItem.Name);
             ((TextView) rootView.findViewById(R.id.ItemDetails_DescriptionValue)).setText(mItem.Description);
-            ((TextView) rootView.findViewById(R.id.ItemDetails_RangeValue)).setText(String.valueOf(mItem.Range));
-            ((TextView) rootView.findViewById(R.id.ItemDetails_ValueValue)).setText(String.valueOf(mItem.Value));
-            ((TextView) rootView.findViewById(R.id.ItemDetails_DamageValue)).setText(String.valueOf(mItem.Damage));
+            //((TextView) rootView.findViewById(R.id.ItemDetails_RangeValue)).setText(String.valueOf(mItem.Range));
+            //((TextView) rootView.findViewById(R.id.ItemDetails_ValueValue)).setText(String.valueOf(mItem.Value));
+            //((TextView) rootView.findViewById(R.id.ItemDetails_DamageValue)).setText(String.valueOf(mItem.Damage));
         }
 
         return rootView;
