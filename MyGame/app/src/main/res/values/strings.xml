@@ -11,4 +11,8 @@
     <string name="RightFinger">Right Finger</string>
     <string name="LeftFinger">Left Finger</string>
     <string name="Feet">Feet</string>
+    <string name="Attack">Attack</string>
+    <string name="Defence">Defence</string>
+    <string name="Speed">Speed</string>
+    <string name="Health">Health</string>
 </resources>
